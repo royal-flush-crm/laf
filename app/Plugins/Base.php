@@ -2,9 +2,9 @@
 
 namespace App\Plugins;
 
-use Yaf\Plugin_Abstract;
-use Yaf\Request_Abstract as Request;
-use Yaf\Response_Abstract as Response;
+use Yaf_Plugin_Abstract as Plugin_Abstract;
+use Yaf_Request_Abstract as Request;
+use Yaf_Response_Abstract as Response;
 
 abstract class Base extends Plugin_Abstract
 {

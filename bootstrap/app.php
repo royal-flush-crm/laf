@@ -2,9 +2,9 @@
 
 use App\Plugins\Module;
 use Library\Box;
-use Yaf\Bootstrap_Abstract;
-use Yaf\Dispatcher;
-use Yaf\Registry;
+use Yaf_Bootstrap_Abstract as Bootstrap_Abstract;
+use Yaf_Dispatcher as Dispatcher;
+use Yaf_Registry as Registry;
 
 class Bootstrap extends Bootstrap_Abstract
 {
@@ -26,5 +26,15 @@ class Bootstrap extends Bootstrap_Abstract
     {
         $module = Box::get(Module::class);
         $dispatcher->registerPlugin($module);
+    }
+
+    /**
+     * disable view
+     *
+     * @param Dispatcher $dispatcher
+     */
+    public function _initView(Dispatcher $dispatcher)
+    {
+        $dispatcher->getInstance()->disableView();
     }
 }
