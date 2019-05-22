@@ -1,11 +1,12 @@
 <?php
 
-use Yaf_Controller_Abstract as Controller_Abstract;
+namespace App\Controllers;
 
-class IndexController extends Controller_Abstract
+
+class IndexController extends BaseController
 {
-	public function indexAction()
-	{
-		echo "Hello world";
-	}
+    public function indexAction()
+    {
+        echo "Hello world";
+    }
 }
