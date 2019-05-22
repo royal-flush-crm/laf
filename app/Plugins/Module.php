@@ -4,10 +4,10 @@
 namespace App\Plugins;
 
 
-use Yaf_Application as Application;
-use Yaf_Registry as Registry;
-use Yaf_Request_Abstract as Request;
-use Yaf_Response_Abstract as Response;
+use Yaf\Application;
+use Yaf\Registry;
+use Yaf\Request_Abstract as Request;
+use Yaf\Response_Abstract as Response;
 
 class Module extends Base
 {

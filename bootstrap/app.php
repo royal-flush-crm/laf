@@ -2,9 +2,11 @@
 
 use App\Plugins\Module;
 use Library\Box;
-use Yaf_Bootstrap_Abstract as Bootstrap_Abstract;
-use Yaf_Dispatcher as Dispatcher;
-use Yaf_Registry as Registry;
+use Yaf\Bootstrap_Abstract;
+use Yaf\Dispatcher;
+use Yaf\Registry;
+use Yaf\Application;
+use Yaf\Loader;
 
 class Bootstrap extends Bootstrap_Abstract
 {
@@ -12,8 +14,22 @@ class Bootstrap extends Bootstrap_Abstract
 
     public function _initConfig()
     {
-        $this->_config = Yaf_Application::app()->getConfig();
+        $this->_config = Application::app()->getConfig();
         Registry::set('config', $this->_config);
+    }
+
+    /**
+     * composer autoload
+     *
+     * @param Dispatcher $dispatcher
+     */
+    public function _initAutoload(Dispatcher $dispatcher)
+    {
+        $autoload = APP_ROOT . '/vendor/autoload.php';
+        if (file_exists($autoload)) {
+            Loader::import($autoload);
+        }
+        spl_autoload_register('autoload_controller');
     }
 
     /**
