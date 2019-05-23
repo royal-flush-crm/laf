@@ -1,0 +1,12 @@
+{
+    "name": "laf",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "axios": "^0.18.0",
+        "babel-polyfill": "^6.26.0",
+        "element-ui": "^2.8.2",
+        "lodash": "^4.17.11",
+        "vue": "^2.6.10"
+    }
+}
