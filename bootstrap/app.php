@@ -20,10 +20,8 @@ class Bootstrap extends Bootstrap_Abstract
 
     /**
      * composer autoload
-     *
-     * @param Dispatcher $dispatcher
      */
-    public function _initAutoload(Dispatcher $dispatcher)
+    public function _initAutoload()
     {
         $autoload = APP_ROOT . '/vendor/autoload.php';
         if (file_exists($autoload)) {
