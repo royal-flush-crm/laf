@@ -26,7 +26,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "illuminate/database": "^5.8",
         "fzaninotto/faker": "^1.8",
-        "ext-yaf": "*"
+        "ext-yaf": "*",
+        "symfony/console": "^4.2"
     },
     "autoload": {
         "psr-4": {
