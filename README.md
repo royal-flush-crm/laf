@@ -1,6 +1,8 @@
 ## Laf
 
 [![](https://github.styleci.io/repos/187305195/shield?branch=master)](https://github.styleci.io/analyses/XlOZ6r)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=laf&metric=alert_status)](https://sonarcloud.io/dashboard?id=laf)
+
 ### 安装Yaf
 在[PECL](https://pecl.php.net/package/yaf)上下载并安装 Yaf
 
