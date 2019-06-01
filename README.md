@@ -1,5 +1,6 @@
 ## Laf
 
+[![Packagist](https://img.shields.io/packagist/v/royal-flush-crm/laf.svg)](https://packagist.org/packages/royal-flush-crm/laf) 
 [![](https://github.styleci.io/repos/187305195/shield?branch=master)](https://github.styleci.io/analyses/XlOZ6r)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=laf&metric=alert_status)](https://sonarcloud.io/dashboard?id=laf)
 
