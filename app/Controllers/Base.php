@@ -3,19 +3,18 @@
 
 //namespace App\Controllers;
 
-
 use Yaf\Controller_Abstract;
 
 /**
- * Class BaseController
+ * Class BaseController.
  *
- * @package App\Controllers
  * @property string $_module
  * @property string $_name
  * @property Yaf\Request_Abstract $_request
  * @property Yaf\Response_Abstract $_response
  * @property array $_invoke_args
  * @property Yaf\View_Interface $_view
+ *
  * @method render($tpl, array $parameters = null)
  * @method display($tpl, array $parameters = null)
  * @method getRequest()
@@ -33,5 +32,4 @@ use Yaf\Controller_Abstract;
  */
 abstract class BaseController extends Controller_Abstract
 {
-
 }

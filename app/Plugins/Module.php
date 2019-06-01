@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Plugins;
-
 
 use Yaf\Application;
 use Yaf\Registry;
@@ -12,10 +10,11 @@ use Yaf\Response_Abstract as Response;
 class Module extends Base
 {
     /**
-     * modules plugin
+     * modules plugin.
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
+     *
      * @return bool|void
      */
     public function routerStartup(Request $request, Response $response)
@@ -41,18 +40,18 @@ class Module extends Base
                 $uriArray = [
                     $defaultModule,
                     $defaultController,
-                    $defaultAction
+                    $defaultAction,
                 ];
             }
         } else {
             $uriArray = [
                 $defaultModule,
                 $defaultController,
-                $defaultAction
+                $defaultAction,
             ];
         }
 
-        $requestUri = "{$baseUri}/" . implode('/', $uriArray);
+        $requestUri = "{$baseUri}/".implode('/', $uriArray);
         $request->setRequestUri($requestUri);
     }
 }
