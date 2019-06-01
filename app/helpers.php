@@ -2,7 +2,7 @@
 
 if (!function_exists('autoload_controller')) {
     /**
-     * autoload for controller
+     * autoload for controller.
      *
      * @param string $class
      */
@@ -14,8 +14,8 @@ if (!function_exists('autoload_controller')) {
         }
         $class = str_replace('App\\', 'app\\', substr($class, 0, -10));
 
-        $file = APP_ROOT . '\\' .$class . '.php';
-        if(file_exists($file)) {
+        $file = APP_ROOT.'\\'.$class.'.php';
+        if (file_exists($file)) {
             Yaf\Loader::import($file);
         }
     }

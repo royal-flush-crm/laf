@@ -2,11 +2,11 @@
 
 //use App\Plugins\Module;
 //use Library\Box;
+use Yaf\Application;
 use Yaf\Bootstrap_Abstract;
 use Yaf\Dispatcher;
-use Yaf\Registry;
-use Yaf\Application;
 use Yaf\Loader;
+use Yaf\Registry;
 
 class Bootstrap extends Bootstrap_Abstract
 {
@@ -19,11 +19,11 @@ class Bootstrap extends Bootstrap_Abstract
     }
 
     /**
-     * composer autoload
+     * composer autoload.
      */
     public function _initAutoload()
     {
-        $autoload = APP_ROOT . '/vendor/autoload.php';
+        $autoload = APP_ROOT.'/vendor/autoload.php';
         if (file_exists($autoload)) {
             Loader::import($autoload);
         }
@@ -31,9 +31,10 @@ class Bootstrap extends Bootstrap_Abstract
     }
 
     /**
-     * init plugin
+     * init plugin.
      *
      * @param Dispatcher $dispatcher
+     *
      * @throws ReflectionException
      */
 //    public function _initPlugins(Dispatcher $dispatcher)
@@ -43,7 +44,7 @@ class Bootstrap extends Bootstrap_Abstract
 //    }
 
     /**
-     * disable view
+     * disable view.
      *
      * @param Dispatcher $dispatcher
      */

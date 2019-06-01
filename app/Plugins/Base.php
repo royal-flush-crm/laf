@@ -13,7 +13,7 @@ abstract class Base extends Plugin_Abstract
      *
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.routerstartup.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function routerStartup(Request $request, Response $response)
@@ -25,7 +25,7 @@ abstract class Base extends Plugin_Abstract
      *
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.routershutdown.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function routerShutdown(Request $request, Response $response)
@@ -35,7 +35,7 @@ abstract class Base extends Plugin_Abstract
     /**
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.dispatchloopstartup.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function dispatchLoopStartup(Request $request, Response $response)
@@ -47,7 +47,7 @@ abstract class Base extends Plugin_Abstract
      *
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.dispatchloopshutdown.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function dispatchLoopShutdown(Request $request, Response $response)
@@ -57,7 +57,7 @@ abstract class Base extends Plugin_Abstract
     /**
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.predispatch.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function preDispatch(Request $request, Response $response)
@@ -67,7 +67,7 @@ abstract class Base extends Plugin_Abstract
     /**
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.postdispatch.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function postDispatch(Request $request, Response $response)
@@ -77,7 +77,7 @@ abstract class Base extends Plugin_Abstract
     /**
      * @link http://www.php.net/manual/en/yaf-plugin-abstract.preresponse.php
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
      */
     public function preResponse(Request $request, Response $response)
