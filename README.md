@@ -26,3 +26,14 @@ composer create-project royal-flush-crm/laf
 composer install
 npm install
 ```
+
+### 启动项目
+页面
+```
+npm run watch
+```
+
+命令行
+```
+php laf
+```
