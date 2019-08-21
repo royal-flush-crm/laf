@@ -1,12 +1,32 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+$env = get_cfg_var('env');
 
-use Symfony\Component\Console\Application;
+define('APPLICATION_ENV', $env);
 
-$application = new Application();
+define('APP_ROOT', dirname(__FILE__));
 
-// ... register commands
+$action = $argv[1];
+if (empty($action) || !is_string($action)) {
+    echo '请输入脚本名' . PHP_EOL;
+    exit();
+}
 
-$application->run();
+$origin_params = array_slice($argv, 2);
+$params = [];
+
+foreach ($origin_params as $origin_param) {
+    $temp = explode('=', $origin_param);
+    $params[$temp[0]] = $temp[1];
+}
+
+$app = new Yaf\Application(APP_ROOT . '/config/application.ini', APPLICATION_ENV);
+$app->bootstrap();
+
+try {
+    $app->getDispatcher()->dispatch(new Yaf\Request\Simple('CLI', 'index', 'job', $action, $params));
+} catch (Yaf\Exception\LoadFailed\Action $e) {
+    echo '请确认脚本名是否正确' . PHP_EOL;
+    exit();
+}

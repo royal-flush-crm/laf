@@ -1,7 +1,5 @@
 <?php
 
-//use App\Plugins\Module;
-//use Library\Box;
 use Yaf\Application;
 use Yaf\Bootstrap_Abstract;
 use Yaf\Dispatcher;
@@ -27,21 +25,7 @@ class Bootstrap extends Bootstrap_Abstract
         if (file_exists($autoload)) {
             Loader::import($autoload);
         }
-//        spl_autoload_register('autoload_controller');
     }
-
-    /**
-     * init plugin.
-     *
-     * @param Dispatcher $dispatcher
-     *
-     * @throws ReflectionException
-     */
-//    public function _initPlugins(Dispatcher $dispatcher)
-//    {
-//        $module = Box::get(Module::class);
-//        $dispatcher->registerPlugin($module);
-//    }
 
     /**
      * disable view.
