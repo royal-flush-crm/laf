@@ -1,7 +1,5 @@
 <?php
 
-
-
 use Yaf\Controller_Abstract;
 
 /**
