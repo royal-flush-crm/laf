@@ -1,6 +1,5 @@
 <?php
 
-use Yaf\Application;
 use Yaf\Bootstrap_Abstract;
 use Yaf\Dispatcher;
 use Yaf\Loader;
@@ -10,7 +9,7 @@ class Bootstrap extends Bootstrap_Abstract
 {
     public function _initConfig()
     {
-        $const = new \Yaf\Config\Ini(APP_ROOT . '/config/const.ini');
+        $const = new \Yaf\Config\Ini(APP_ROOT.'/config/const.ini');
         Registry::set('const_config', $const);
     }
 
