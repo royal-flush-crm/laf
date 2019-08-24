@@ -8,12 +8,10 @@ use Yaf\Registry;
 
 class Bootstrap extends Bootstrap_Abstract
 {
-    private $_config;
-
     public function _initConfig()
     {
-        $this->_config = Application::app()->getConfig();
-        Registry::set('config', $this->_config);
+        $const = new \Yaf\Config\Ini(APP_ROOT . '/config/const.ini');
+        Registry::set('const_config', $const);
     }
 
     /**
