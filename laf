@@ -7,9 +7,9 @@ define('APPLICATION_ENV', $env);
 
 define('APP_ROOT', dirname(__FILE__));
 
-$action = $argv[1];
+$action = $argv[1] ?? '';
 if (empty($action) || !is_string($action)) {
-    echo '请输入脚本名' . PHP_EOL;
+    echo '请输入命令' . PHP_EOL;
     exit();
 }
 
@@ -25,8 +25,8 @@ $app = new Yaf\Application(APP_ROOT . '/config/application.ini', APPLICATION_ENV
 $app->bootstrap();
 
 try {
-    $app->getDispatcher()->dispatch(new Yaf\Request\Simple('CLI', 'index', 'job', $action, $params));
+    $app->getDispatcher()->dispatch(new Yaf\Request\Simple('CLI', 'index', 'console', $action, $params));
 } catch (Yaf\Exception\LoadFailed\Action $e) {
-    echo '请确认脚本名是否正确' . PHP_EOL;
+    echo '未识别的命令' . PHP_EOL;
     exit();
 }
