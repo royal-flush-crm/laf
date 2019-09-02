@@ -3,7 +3,7 @@
 class TestAction extends \Yaf\Action_Abstract
 {
     /**
-     * 命令主方法
+     * 命令主方法.
      */
     public function execute()
     {

@@ -3,7 +3,7 @@
 class ConsoleController extends BaseController
 {
     /**
-     * 命令定义
+     * 命令定义.
      *
      * @var array 虚拟方法名 映射命令文件
      */
