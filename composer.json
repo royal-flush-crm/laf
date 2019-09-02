@@ -32,7 +32,6 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Business\\": "app/Business/",
             "Library\\": "app/Library/"
         },
         "files": [
@@ -42,7 +41,10 @@
     "repositories": {
         "packagist": {
             "type": "composer",
-            "url": "https://packagist.laravel-china.org"
+            "url": "https://mirrors.aliyun.com/composer/"
         }
+    },
+    "require-dev": {
+        "composer/composer": "^1.9"
     }
 }
